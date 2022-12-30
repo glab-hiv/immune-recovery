@@ -39,7 +39,7 @@ To ascertain immune cell phenotype and functional changes associated with initia
 Ann Marie Weideman, <anndo1@umbc.edu> (preferred) or <anndo1@live.unc.edu>
 
 ### Description
-To examine whether there was a change in leukocyte populations and subpopulations over time, a [quasi-binomial] (https://books.google.com/books/about/Generalized_Linear_Models_Second_Edition.html?id=h9kFH2_FfBkC) fixed-effects regression with indicators for participant ID (PID) was fit separately to the data from each cohort (PWH-ART and ACTG5248) using the data in the CyTOF Data folder. Each R script descrbied below plots the data to check model assumptions (e.g., linearity to the logit), fits a separate model for each population, and outputs the slope estimates and corresponding confidence assessments with accompanying interpretation. 
+To examine whether there was a change in leukocyte populations and subpopulations over time, a [quasi-binomial fixed-effects regression](https://books.google.com/books/about/Generalized_Linear_Models_Second_Edition.html?id=h9kFH2_FfBkC) with indicators for participant ID (PID) was fit separately to the data from each cohort (PWH-ART and ACTG5248) using the data in the CyTOF Data folder. Each R script descrbied below plots the data to check model assumptions (e.g., linearity to the logit), fits a separate model for each population, and outputs the slope estimates and corresponding confidence assessments with accompanying interpretation. 
 
-* `FEreg_CD4.r` quasi-binomial fixed effects regression for CD4 T cell memory dynamics. 
+* `FEreg_CD4.r` quasi-binomial fixed-effects regression for CD4 T cell memory dynamics. 
 * `FEreg_CD8.r` quasi-binomial fixed-effects regression for CD8 T cell memory dynamics. 
