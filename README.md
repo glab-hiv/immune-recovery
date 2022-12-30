@@ -15,4 +15,5 @@ Includes preprocessed CyTOF files (FCS format) from a [***]-marker mass cytometr
 ## Elastic Net Regression
 ***
 ## Quasi-Binomial Fixed-Effects Regression
+Author: Ann Marie Weideman <anndo1@umbc.edu>
 To examine whether there was a change in leukocyte populations and subpopulations over time, a quasi-binomial fixed-effects regression with indicators for participant ID (PID) was fit separately to the data from each cohort (PWH-ART and ACTG5248) using the data in the CyTOF Data folder. The R code for these models is separated into two scripts for CD4 T cell memory dynamics (FEreg_CD4.r) and for CD8 T cell memory dynamics (FEreg_CD8.r). Each script plots the data to check model assumptions (e.g., linearity to the logit), fits a separate model for each population, and outputs the slope estimates and corresponding confidence assessments with accompanying interpretation. 
