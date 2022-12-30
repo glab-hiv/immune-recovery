@@ -2,7 +2,7 @@
 ## Placeholder for Title/Link to Publication
 ***
 ## CyTOF Data (**sent to Alexis to edit**)
-Includes preprocessed CyTOF files (FCS format) from a [***]-marker mass cytometry panel to examine CD4 and CD8 T cell memory dynamics in people with HIV (PWH) who are durably (~5yrs) ART suppressed (PWH-ART, n=10) and PWH in the 1.5 years following ART initiation (n=10, ACTG5248). The panel included markers of activation (HLA-DR, CD38, CCR5), activation/exhaustion (PD-1), proliferation (Ki67), survival (Bcl-2) and long-lived memory (CD127). 
+Includes preprocessed CyTOF files (FCS format) from a 31-marker mass cytometry panel to examine all major PBMC lineages and specifically CD4 and CD8 T cell memory dynamics in people with HIV (PWH) who are durably ART suppressed for an average of 6.7 years (LT-ART, n=10) and PWH in the first 500 days following ART initiation (A5248, n=10). The panel also includes markers of activation (HLA-DR, CD38, CCR5), activation/exhaustion (PD-1), proliferation (Ki67), survival (Bcl-2) and long-lived memory (CD127).
 
 ### Cohort Summary 
 <p align="center">
@@ -32,7 +32,7 @@ To ascertain immune cell phenotype and functional changes associated with initia
 
 ## Quasi-Binomial Fixed-Effects Regression
 ### Dependencies
-R >= 4.2.2, ggplot2>=3.4.0, dplyr>=1.0.10, margins 0.3.26, writexl 1.4.1
+* R >= 4.2.2, ggplot2>=3.4.0, dplyr>=1.0.10, margins 0.3.26, writexl 1.4.1
 
 ### Author
 Ann Marie Weideman, <anndo1@umbc.edu> (preferred) or <anndo1@live.unc.edu>
