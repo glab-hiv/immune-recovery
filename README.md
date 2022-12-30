@@ -9,13 +9,6 @@ Includes preprocessed CyTOF files (FCS format) from a [***]-marker mass cytometr
   <img src="overview.png" width="75%" height ="75%" />
 </p>
 
-1. People with HIV durably suppressed on ART (PWH-ART)
-   - n=10 participants
-   - 3 different timepoints for each
-2. People with HIV in the 1.5 years following ART initiation (ACTG5248)
-   - n=10 participants
-   - 12 timepoints for each at days: 0, 2, 7, 10, 14, 21, 28, 56, 84, 140, 252, 504
-
 ## Installation
 You can clone the git repository by, 
 ```
@@ -38,7 +31,14 @@ To ascertain immune cell phenotype and functional changes associated with initia
 * `run_elasticnet.ipynb` - Engineers descriptive mass cytometry immune features from unsupervised clusters (e.g. cell population frequency) and performs elastic net regression to identify changes in unsupervised cluster-derived features over time. 
 
 ## Quasi-Binomial Fixed-Effects Regression
+### Dependencies
+R >= 4.2.2, ggplot2>=3.4.0, dplyr>=1.0.10, margins 0.3.26, writexl 1.4.1
+
 ### Author
 Ann Marie Weideman, <anndo1@umbc.edu> (preferred) or <anndo1@live.unc.edu>
+
 ### Description
-To examine whether there was a change in leukocyte populations and subpopulations over time, a quasi-binomial fixed-effects regression with indicators for participant ID (PID) was fit separately to the data from each cohort (PWH-ART and ACTG5248) using the data in the CyTOF Data folder. The R code for these models is separated into two scripts for CD4 T cell memory dynamics (FEreg_CD4.r) and for CD8 T cell memory dynamics (FEreg_CD8.r). Each script plots the data to check model assumptions (e.g., linearity to the logit), fits a separate model for each population, and outputs the slope estimates and corresponding confidence assessments with accompanying interpretation. 
+To examine whether there was a change in leukocyte populations and subpopulations over time, a quasi-binomial fixed-effects regression with indicators for participant ID (PID) was fit separately to the data from each cohort (PWH-ART and ACTG5248) using the data in the CyTOF Data folder. Each R script descrbied below plots the data to check model assumptions (e.g., linearity to the logit), fits a separate model for each population, and outputs the slope estimates and corresponding confidence assessments with accompanying interpretation. 
+
+* `FEreg_CD4.r` quasi-binomial fixed effects regression for CD4 T cell memory dynamics. 
+* `FEreg_CD8.r` quasi-binomial fixed-effects regression for CD8 T cell memory dynamics. 
