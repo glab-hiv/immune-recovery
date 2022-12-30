@@ -33,7 +33,7 @@ Jolene Ranek, <ranekj@live.unc.edu>
 To ascertain immune cell phenotype and functional changes associated with initiation of antiretroviral therapy or durable suppression, a predictive elastic net regression model was trained on immune features that described the cell type composition and cell type signaling activity of profiled samples over time. Python scripts for preprocessing (preprocess.py, subsample.py), clustering (cluster.ipynb), and elastic net regression (run_elasticnet.ipynb) are described below. 
 
 * `preprocess.py` - Creates a preprocessed __.h5ad__ data object for each patient cohort. This script parses FCS files from the CyTOF data folder and performs preprocessing by arcsinh transforming data with a cofactor of 5. 
-* `subsample.py` - Downsamples data (2500 cells per patient sample) using [Kernel Herding sketching](https://github.com/CompCy-lab/SketchKH).
+* `subsample.py` - Downsamples data (2500 cells per patient sample) using [Kernel Herding sketching](https://dl.acm.org/doi/abs/10.1145/3535508.3545539).
 * `cluster.ipynb` - Performs unsupervised meta-clustering on the downsampled data using the [PhenoGraph algorithm](https://pubmed.ncbi.nlm.nih.gov/26095251/).
 * `run_elasticnet.ipynb` - Engineers descriptive mass cytometry immune features from unsupervised clusters (e.g. cell population frequency) and performs elastic net regression to identify changes in unsupervised cluster-derived features over time. 
 
