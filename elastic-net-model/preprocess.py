@@ -36,15 +36,15 @@ markers_dict = {'89Y_CD45':'CD45',
 
 #create csv of metadata files
 data_directory = 'data'
-sample_folder = 'ACTG5248'
+sample_folder = 'A5248'
 
 dir = os.path.join(data_directory, sample_folder)
-metadata_ACT = obtain_metadata(dir)
-metadata_ACT.to_csv(os.path.join(data_directory, '{}_metadata.csv'.format(sample_folder)))
-adata_act = run_preprocess(data_directory = data_directory, sample_folder = sample_folder, markers_dict = markers_dict)
+metadata_A5248 = obtain_metadata(dir)
+metadata_A5248.to_csv(os.path.join(data_directory, '{}_metadata.csv'.format(sample_folder)))
+adata_A5248 = run_preprocess(data_directory = data_directory, sample_folder = sample_folder, markers_dict = markers_dict)
 
-sample_folder = 'CHI'
+sample_folder = 'LT-ART'
 dir = os.path.join(data_directory, sample_folder)
-metadata_CHI = obtain_metadata(dir)
-metadata_CHI.to_csv(os.path.join(data_directory, '{}_metadata.csv'.format(sample_folder)))
-adata_chi = run_preprocess(data_directory = data_directory, sample_folder = sample_folder, markers_dict = markers_dict)
+metadata_LT = obtain_metadata(dir)
+metadata_LT.to_csv(os.path.join(data_directory, '{}_metadata.csv'.format(sample_folder)))
+adata_LT = run_preprocess(data_directory = data_directory, sample_folder = sample_folder, markers_dict = markers_dict)

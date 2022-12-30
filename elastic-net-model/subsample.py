@@ -9,8 +9,8 @@ from kh import *
 directory = 'data'
 
 print('reading in data')
-adata = sc.read_h5ad(os.path.join(directory, 'ACTG5248_preprocessed.h5ad'))    
-# adata = sc.read_h5ad(os.path.join(directory, 'CHI_preprocessed.h5ad')) 
+sample_id = 'A5248' #'LT-ART'
+adata = sc.read_h5ad(os.path.join(directory, f'{sample_id}_preprocessed.h5ad'))    
        
 # KH subsampling: please see repo: https://github.com/CompCy-lab/SketchKH
 fcs_files = list(adata.obs['fcs_file'].cat.categories)
@@ -27,5 +27,4 @@ for i in tqdm(range(num_sample_sets)):
     kh_indices = kernel_herding(phi, num_samples)
     subsample_idx.append(kh_indices)
 
-np.save(os.path.join(directory, 'ACTG5248_kh_subsample_{}.npy'.format(str(num_samples))), np.asarray(subsample_idx))
-# np.save(os.path.join(directory, 'CHI_kh_subsample_{}.npy'.format(str(num_samples))), np.asarray(subsample_idx))
+np.save(os.path.join(directory, f'{sample_id}_kh_subsample_{num_samples}.npy'), np.asarray(subsample_idx))
