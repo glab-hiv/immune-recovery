@@ -9,7 +9,7 @@ Includes preprocessed CyTOF files (FCS format) from a [***]-marker mass cytometr
    - n=10 participants
    - 3 different timepoints for each.
 2. People with HIV in the 1.5 years following ART initiation (ACTG5248)
-   - n= 10 participants
+   - n=10 participants
    - 12 timepoints for each at days: 0, 2, 7, 10, 14, 21, 28, 56, 84, 140, 252, 504
 
 ## Elastic Net Regression
