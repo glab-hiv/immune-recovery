@@ -33,7 +33,7 @@ To ascertain immune cell phenotype and functional changes associated with initia
 * `cluster.ipynb` - Performs unsupervised meta-clustering on the downsampled data using the [PhenoGraph algorithm](https://pubmed.ncbi.nlm.nih.gov/26095251/).
 * `run_elasticnet.ipynb` - Engineers descriptive mass cytometry immune features from unsupervised clusters (e.g. cell population frequency) and performs [elastic net regression](https://www.jstor.org/stable/3647580) to identify changes in unsupervised cluster-derived features over time. 
 
-## Quasi-Binomial and Gamma Fixed-Effects Regression
+## Quasi-Binomial and Gamma Fixed-Effects Regression Models
 ### Dependencies
 * R >= 4.2.2, ggplot2>=3.4.0, dplyr>=1.0.10, margins 0.3.26, writexl 1.4.1
 
@@ -41,14 +41,14 @@ To ascertain immune cell phenotype and functional changes associated with initia
 Ann Marie Weideman, <anndo1@umbc.edu> (preferred) or <anndo1@live.unc.edu>
 
 ### Description
-To examine longitudinal changes in the proportion of different cell populations (e.g., CD4 cells) expressing certain biomarkers (e.g., CCR5+ or a combination of biomarkers CCR7+CD45RA+), [quasi-binomial fixed-effects regression models](https://books.google.com/books/about/Generalized_Linear_Models_Second_Edition.html?id=h9kFH2_FfBkC) were fit separately for data from each cell population and each cohort (LT-ART and A5248) using the data in the Zenodo data folder. 
+To examine longitudinal changes in the proportion of different cell populations (e.g., CD4 cells) expressing certain biomarkers (e.g., CCR5+ or a combination of biomarkers CCR7+CD45RA+), [quasi-binomial fixed-effects regression models](https://books.google.com/books/about/Generalized_Linear_Models_Second_Edition.html?id=h9kFH2_FfBkC) were fit separately for data from each cell population and each cohort (LT-ART and A5248) using data from the [Zenodo](https://zenodo.org/record/7495836) respository. 
 
 Each R script described below plots the data to check model assumptions (e.g., linearity to the logit), fits a separate model for each cell population and each cohort (LT-ART and A5248), and outputs the slope estimates and corresponding confidence assessments with accompanying interpretation. 
 
 * `QuasiBinom_FEM_CD4.r` quasi-binomial fixed-effects regression model for CD4 T cell memory dynamics. 
 * `QuasiBinom_FEM_CD8.r` quasi-binomial fixed-effects regression model for CD8 T cell memory dynamics.
 
-Longitudinal changes in proteins expressed on the cell surface and intracellularly as measured by mean signal intensity (MSI) were also examined. Since values of MSI are positive and continuous, a gamma fixed-effects regression with log link was fit separately to the data from each expressed protein and each cohort (LT-ART and A5248) using the data in the Zenodo data folder, and deviance residuals were inspected for normality. 
+Longitudinal changes in proteins expressed on the cell surface and intracellularly as measured by mean signal intensity (MSI) were also examined. Since values of MSI are positive and continuous, a gamma fixed-effects regression with log link was fit separately to the data from each expressed protein and each cohort (LT-ART and A5248) using data from the [Zenodo](https://zenodo.org/record/7495836) respository, and deviance residuals were inspected for normality. 
 
 Each R script described below fits a separate model for each cell population and each cohort (LT-ART and A5248), checks the deviance residuals for normality, and outputs the slope estimates and corresponding confidence assessments with accompanying interpretation.
 
