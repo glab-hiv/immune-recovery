@@ -5,7 +5,7 @@
 ## CyTOF Data
 A 31-marker mass cytometry panel was used to examine all major PBMC lineages and specifically CD4 and CD8 T cell memory dynamics in people with HIV (PWH) who are durably ART suppressed for an average of 6.7 years (LT-ART, n=10) and PWH in the first 500 days following ART initiation (A5248, n=10). The panel also includes markers of activation (HLA-DR, CD38, CCR5), activation/exhaustion (PD-1), proliferation (Ki67), survival (Bcl-2) and long-lived memory (CD127).
 
-You can download the publicly available preprocessed CyTOF files (FCS format) or preprocessed downsampled data from the unsupervised analysis (h5ad format) from the [Zenodo](https://zenodo.org/record/7495836) repository.
+You can download the publicly available preprocessed CyTOF files (FCS format) or preprocessed downsampled data from the unsupervised analysis (h5ad format) from the [Zenodo](https://doi.org/10.5281/zenodo.7986013) repository.
 
 ### Cohort Summary 
 <p align="center">
